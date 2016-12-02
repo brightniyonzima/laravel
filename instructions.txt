@@ -1,0 +1,43 @@
+# TECHNOLOGIES USED
+|-----------------------------------|---------------------|-----------------|
+|Component                          | Role                | Minimum Version |
+|-----------------------------------|---------------------|-----------------|
+| PHP-                              |Programming Language | PHP 5.5         |
+|[Laravel](https://laravel.com/)    |Web Framework        | Laravel 5.3     |
+|[MySQL](https://www.mysql.com)     |Database             | MySQL 5.7.8     |
+|[Apache](https://httpd.apache.org/)|Web Server           | Apache 2        |
+
+
+# INSTALLATION - PREREQUISITES
+
+### Installation Option 1: For development (or if you use Windows or Mac)
+This option involves installing a virtual machine. It will take an hour or two but its truly worth it! 
+Simple instructions here => https://gist.github.com/JeffreyWay/af0ee7311abfde3e3b73
+Skip step 2 and step 3 in the instructions. Instead simply cd to your desired directory in the Terminal, and run this command:
+```
+curl -L -o 'install.sh' http://bit.ly/1hBfq57 && curl -L -o 'Vagrantfile' http://bit.ly/1mE3Qt9 && vagrant up
+```
+
+### Installation Option 2: For Production (or if you use Linux)
+
+Step 1: [Install a LAMP stack] 
+(https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-14-04)
+
+Step 2: [Install Laravel] (https://laravel.com/docs/master)
+
+
+# INSTALLATION 
+
+Run the following commands in a suitable directory (e.g. Apache's docRoot)
+
+```
+git clone https://github.com/brightniyonzima/laravel.git
+cd laravel
+composer install
+edit the env file in the root folder to suit your database details e.g your database name, username, password
+run the command 'php artisan migrate' to create all associated tables of the application
+```
+
+## Recommendations 
+1: After installation or any upgrade on any packages, always type 'composer dump-autoload' in your terminal to refresh
+2: Be careful when using comments in php blade files as at times laravel 5.3 seems to ignore that comments are comments
